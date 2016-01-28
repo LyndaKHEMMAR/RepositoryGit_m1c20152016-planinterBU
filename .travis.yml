@@ -1,0 +1,13 @@
+# configuration file for Travis-CI
+# https://travis-ci.org
+
+language: java
+
+sudo: false
+
+jdk:
+  - oraclejdk8
+
+script:
+  - ./gradlew check jacocoTestReport coveralls
+
